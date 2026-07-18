@@ -21,7 +21,7 @@ class CashRegister:
             self._discount = getattr(self, "_discount", 0)
 
     def add_item(self, item, price, quantity=1):
-        self.total += price
+        self.total += price * quantity
         self.items.append(item)
         self.previous_transactions.append({
             "item": item,
